@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">ParkingSystemJava</string>
+    <string name="button_main_configure_parking_size">configure parking size</string>
+    <string name="text_main_welcome_message">Welcome!</string>
 </resources>
