@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="MainTitleStyle">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/dimen_text_main_big</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:text">@string/text_main_welcome_message</item>
+        <item name="android:layout_marginTop">@dimen/margin_top_main_xbig</item>
+    </style>
+
+    <style name="MainButtonStyle">
+        <item name="android:text">@string/button_main_configure_parking_size</item>
+        <item name="android:backgroundTint">@color/yellow</item>
+        <item name="android:layout_marginTop">@dimen/margin_top_button_main_small</item>
+    </style>
+</resources>
