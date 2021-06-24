@@ -13,4 +13,23 @@
         <item name="android:backgroundTint">@color/yellow</item>
         <item name="android:layout_marginTop">@dimen/margin_top_button_main_small</item>
     </style>
+
+    <style name="DialogFragmentTitleStyle">
+        <item name="android:text">@string/title_dialog_fragment</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/dimen_text_dialog_fragment_normal</item>
+        <item name="android:layout_marginTop">@dimen/margin_top_edit_text_dialog_fragment</item>
+    </style>
+
+    <style name="DialogFragmentSaveButtonStyle">
+        <item name="android:text">@string/button_save_dialog_fragment_parking_size</item>
+        <item name="android:backgroundTint">@color/yellow</item>
+    </style>
+
+    <style name="DialogFragmentCancelButtonStyle">
+        <item name="android:text">@string/button_cancel_dialog_fragment_parking_size</item>
+        <item name="android:backgroundTint">@color/yellow</item>
+        <item name="android:layout_marginBottom">@dimen/margin_bottom_button_dialog_fragment_small</item>
+    </style>
+
 </resources>

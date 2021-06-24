@@ -13,7 +13,12 @@ public class ParkingPresenter implements ParkingContract.PresenterContract {
     }
 
     public void onButtonPressed() {
-        model.setParkingAvailables();
         view.showParkingsAvailable(model.getParkingAvailables());
+    }
+
+    @Override
+    public void setParkingLots(int parkingLots) {
+        model.setParkingAvailables(parkingLots);
+        view.showMessageOfParkingLots(model.getParkingAvailables());
     }
 }
