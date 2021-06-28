@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <dimen name="dimen_text_main_big">30sp</dimen>
+    <dimen name="dimen_text_dialog_fragment_normal">20sp</dimen>
     <dimen name="margin_top_main_xbig">200dp</dimen>
     <dimen name="margin_top_button_main_small">20dp</dimen>
+    <dimen name="margin_top_edit_text_dialog_fragment">20dp</dimen>
+    <dimen name="edit_text_dialog_fragment_parking_lots_width">250dp</dimen>
+    <dimen name="margin_top_button_dialog_fragment_small">10dp</dimen>
+    <dimen name="margin_bottom_button_dialog_fragment_small">10dp</dimen>
 </resources>

@@ -3,11 +3,10 @@ package com.example.parkingsystemjava.mvp.model;
 import com.example.parkingsystemjava.mvp.contract.ParkingContract;
 
 public class ParkingModel implements ParkingContract.ModelContract {
+    private int parkingAvailables;
 
-    private int parkingAvailables = 0;
-
-    public void setParkingAvailables() {
-        this.parkingAvailables = 10;
+    public void setParkingAvailables(int parkingLots) {
+        this.parkingAvailables = parkingLots;
     }
 
     public int getParkingAvailables() {
