@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+
     <style name="MainTitleStyle">
         <item name="android:textColor">@color/white</item>
-        <item name="android:textSize">@dimen/dimen_text_main_big</item>
+        <item name="android:textSize">@dimen/dimen_title_text_size_big</item>
         <item name="android:textStyle">bold</item>
         <item name="android:text">@string/text_main_welcome_message</item>
         <item name="android:layout_marginTop">@dimen/margin_top_main_xbig</item>
@@ -21,15 +22,35 @@
         <item name="android:layout_marginTop">@dimen/margin_top_edit_text_dialog_fragment</item>
     </style>
 
-    <style name="DialogFragmentSaveButtonStyle">
+    <style name="SaveButtonStyle">
         <item name="android:text">@string/button_save_dialog_fragment_parking_size</item>
         <item name="android:backgroundTint">@color/yellow</item>
+        <item name="android:layout_marginRight">@dimen/margin_right_small</item>
     </style>
 
-    <style name="DialogFragmentCancelButtonStyle">
+    <style name="CancelButtonStyle">
         <item name="android:text">@string/button_cancel_dialog_fragment_parking_size</item>
         <item name="android:backgroundTint">@color/yellow</item>
         <item name="android:layout_marginBottom">@dimen/margin_bottom_button_dialog_fragment_small</item>
     </style>
 
+    <style name="MainReservationButtonStyle">
+        <item name="android:text">@string/button_main_add_reservation</item>
+        <item name="android:backgroundTint">@color/yellow</item>
+        <item name="android:layout_marginBottom">@dimen/margin_bottom_button_dialog_fragment_small</item>
+    </style>
+
+    <style name="ActivityReservationTitle">
+        <item name="android:text">@string/title_activity_reservation</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:layout_margin">@dimen/margin_top_activity_reservation_title</item>
+        <item name="android:textSize">@dimen/dimen_title_text_size_big</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="EditTextStyle">
+        <item name="android:layout_margin">@dimen/margin_top_button_main_small</item>
+        <item name="android:padding">@dimen/padding_reservation_activity_edit_text_small</item>
+        <item name="android:background">@drawable/border</item>
+    </style>
 </resources>

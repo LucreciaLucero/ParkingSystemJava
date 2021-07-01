@@ -25,11 +25,11 @@
         android:id="@+id/button_save_dialog_fragment_parking_size"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        style="@style/DialogFragmentSaveButtonStyle"/>
+        style="@style/SaveButtonStyle"/>
 
     <Button
         android:id="@+id/button_cancel_dialog_fragment_parking_size"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        style="@style/DialogFragmentCancelButtonStyle"/>
+        style="@style/CancelButtonStyle"/>
 </LinearLayout>

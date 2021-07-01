@@ -6,5 +6,11 @@
     <string name="title_dialog_fragment">Insert the number of parking lots!</string>
     <string name="button_save_dialog_fragment_parking_size">Save</string>
     <string name="button_cancel_dialog_fragment_parking_size">Cancel</string>
-
+    <string name="button_main_add_reservation">New reservation</string>
+    <string name="title_activity_reservation">Make a reservation!</string>
+    <string name="initial_date_title">Initial date</string>
+    <string name="button_initial_date_time_picker_reservation">Select initial date/time</string>
+    <string name="button_end_date_time_picker_reservation">Select end date/time</string>
+    <string name="edit_text_parking_place">Insert your parking place</string>
+    <string name="edit_text_code_of_reservation">Insert your code</string>
 </resources>

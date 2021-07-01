@@ -1,4 +1,4 @@
-package com.example.parkingsystemjava;
+package com.example.parkingsystemjava.fragment;
 
 import android.content.Context;
 import android.os.Bundle;
@@ -7,8 +7,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import androidx.fragment.app.DialogFragment;
 import com.example.parkingsystemjava.databinding.DialogFragmentParkingLotsBinding;
+import com.example.parkingsystemjava.listener.ParkingDialogFragmentListener;
 import com.example.parkingsystemjava.mvp.contract.DialogFragmentContract;
-import com.example.parkingsystemjava.mvp.listener.ParkingDialogFragmentListener;
 import com.example.parkingsystemjava.mvp.presenter.DialogFragmentPresenter;
 import com.example.parkingsystemjava.mvp.view.DialogFragmentView;
 
