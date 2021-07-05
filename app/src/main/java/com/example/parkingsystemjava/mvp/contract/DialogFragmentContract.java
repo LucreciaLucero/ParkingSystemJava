@@ -1,6 +1,6 @@
 package com.example.parkingsystemjava.mvp.contract;
 
-import com.example.parkingsystemjava.mvp.listener.ParkingDialogFragmentListener;
+import com.example.parkingsystemjava.listener.ParkingDialogFragmentListener;
 
 public interface DialogFragmentContract {
     interface PresenterContract {

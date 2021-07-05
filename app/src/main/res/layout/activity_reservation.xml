@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/walpaper_reservation"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/title_activity_reservation"
+        style="@style/ActivityReservationTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/button_initial_date_time_picker_activity_reservation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/yellow"
+        android:text="@string/button_initial_date_time_picker_reservation" />
+
+    <Button
+        android:id="@+id/button_end_date_time_picker_activity_reservation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/yellow"
+        android:text="@string/button_end_date_time_picker_reservation" />
+
+    <EditText
+        android:id="@+id/edit_text_parking_place_activity_reservation"
+        style="@style/EditTextStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/height_activity_reservation_edittext_box"
+        android:hint="@string/edit_text_parking_place"
+        android:imeOptions="actionDone"
+        android:inputType="number" />
+
+    <EditText
+        android:id="@+id/edit_text_activity_reservation_code_place"
+        style="@style/EditTextStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/height_activity_reservation_edittext_box"
+        android:hint="@string/edit_text_code_of_reservation"
+        android:imeOptions="actionDone"
+        android:inputType="number" />
+
+    <Button
+        android:id="@+id/button_save_activity_reservation"
+        style="@style/SaveButtonStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/button_cancel_dialog_fragment_parking_size"
+        style="@style/CancelButtonStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+</LinearLayout>

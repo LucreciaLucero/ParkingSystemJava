@@ -21,4 +21,8 @@ public class ParkingPresenter implements ParkingContract.PresenterContract {
         model.setParkingAvailables(parkingLots);
         view.showMessageOfParkingLots(model.getParkingAvailables());
     }
+
+    public void onButtonReservationPressed() {
+        view.showReservationScreen();
+    }
 }

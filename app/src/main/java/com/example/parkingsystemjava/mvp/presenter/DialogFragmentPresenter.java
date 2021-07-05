@@ -1,7 +1,7 @@
 package com.example.parkingsystemjava.mvp.presenter;
 
 import com.example.parkingsystemjava.mvp.contract.DialogFragmentContract;
-import com.example.parkingsystemjava.mvp.listener.ParkingDialogFragmentListener;
+import com.example.parkingsystemjava.listener.ParkingDialogFragmentListener;
 
 public class DialogFragmentPresenter implements DialogFragmentContract.PresenterContract {
     private DialogFragmentContract.ViewContract view;

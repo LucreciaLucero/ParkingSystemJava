@@ -1,10 +1,10 @@
-package com.example.parkingsystemjava;
+package com.example.parkingsystemjava.activity;
 
 import android.os.Bundle;
 import androidx.appcompat.app.AppCompatActivity;
 import com.example.parkingsystemjava.databinding.ActivityMainBinding;
+import com.example.parkingsystemjava.listener.ParkingDialogFragmentListener;
 import com.example.parkingsystemjava.mvp.contract.ParkingContract;
-import com.example.parkingsystemjava.mvp.listener.ParkingDialogFragmentListener;
 import com.example.parkingsystemjava.mvp.model.ParkingModel;
 import com.example.parkingsystemjava.mvp.presenter.ParkingPresenter;
 import com.example.parkingsystemjava.mvp.view.ParkingView;
@@ -25,6 +25,7 @@ public class MainActivity extends AppCompatActivity implements ParkingDialogFrag
 
     private void setListeners() {
         binding.buttonMainParkingSize.setOnClickListener(view -> presenter.onButtonPressed());
+        binding.buttonMainAddNewReservation.setOnClickListener(view -> presenter.onButtonReservationPressed());
     }
 
     @Override

@@ -1,6 +1,6 @@
 package com.example.parkingsystemjava.mvp.view;
 
-import com.example.parkingsystemjava.DialogFragmentParkingLots;
+import com.example.parkingsystemjava.fragment.DialogFragmentParkingLots;
 import com.example.parkingsystemjava.databinding.DialogFragmentParkingLotsBinding;
 import com.example.parkingsystemjava.mvp.contract.DialogFragmentContract;
 import com.example.parkingsystemjava.mvp.view.base.FragmentView;
