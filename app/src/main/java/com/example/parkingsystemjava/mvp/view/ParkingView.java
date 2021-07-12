@@ -32,7 +32,11 @@ public class ParkingView extends ActivityView implements ParkingContract.ViewCon
     public void showMessageOfParkingLots(int parkingsAvailable) {
         Context context = getContext();
         if (context != null) {
-            Toast.makeText(context, context.getString(R.string.toast_main_parking_size, parkingsAvailable), Toast.LENGTH_SHORT).show();
+            Toast.makeText(context,
+                    context.getString(R.string.toast_main_parking_size,
+                            parkingsAvailable),
+                    Toast.LENGTH_SHORT)
+                    .show();
         }
     }
 
