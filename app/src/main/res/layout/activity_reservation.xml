@@ -51,7 +51,7 @@
         android:layout_height="wrap_content" />
 
     <Button
-        android:id="@+id/button_cancel_dialog_fragment_parking_size"
+        android:id="@+id/button_cancel_activity_reservation"
         style="@style/CancelButtonStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />

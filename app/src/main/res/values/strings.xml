@@ -13,4 +13,6 @@
     <string name="button_end_date_time_picker_reservation">Select end date/time</string>
     <string name="edit_text_parking_place">Insert your parking place</string>
     <string name="edit_text_code_of_reservation">Insert your code</string>
+    <string name="toast_saved_reservation_activity">Reservation saved: \nStart: %1$s, \nEnd: %2$s, \nParking Lots: %3$s \nPass: %4$s </string>
+    <string name="toast_message_error_reservation_activity">Please complete all the fields</string>
 </resources>
