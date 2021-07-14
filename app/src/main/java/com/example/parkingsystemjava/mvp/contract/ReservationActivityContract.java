@@ -14,6 +14,8 @@ public interface ReservationActivityContract {
         void buttonSaveReservation();
 
         void buttonCancelReservation();
+
+        boolean check(Reservation reservation);
     }
 
     interface ViewContract {
@@ -26,6 +28,10 @@ public interface ReservationActivityContract {
         void dismissActivity();
 
         void showMessageOfSavedStatement(Reservation reservation);
+
+        void showMessageOfError();
+
+        void showMessageOfOverlapReservation();
     }
 
     interface ModelContract {
@@ -33,8 +39,12 @@ public interface ReservationActivityContract {
 
         void setEndDate(Calendar endDate);
 
-        void saveReservation(String parkingLots, String pass);
+        void saveReservation();
 
-        Reservation getReservation(String parkingLots, String pass);
+        Reservation createReservation(String parkingLots, String pass);
+
+        boolean existsOverlap(Reservation reservation);
+
+        boolean isOverlap();
     }
 }

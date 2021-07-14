@@ -34,14 +34,34 @@ public class ReservationPresenter implements ReservationActivityContract.Present
 
     @Override
     public void buttonSaveReservation() {
-        model.saveReservation(view.getParkingLots(), view.getUserPassword());
-        Reservation reservation = model.getReservation(view.getParkingLots(), view.getUserPassword());
-        view.showMessageOfSavedStatement(reservation);
-        view.dismissActivity();
+        Reservation reservation = model.createReservation(view.getParkingLots(), view.getUserPassword());
+        model.existsOverlap(reservation);
+        if (!model.isOverlap()) {
+            if (check(reservation)) {
+                model.saveReservation();
+                view.showMessageOfSavedStatement(reservation);
+                view.dismissActivity();
+            } else {
+                view.showMessageOfError();
+            }
+        } else {
+            view.showMessageOfOverlapReservation();
+        }
     }
 
     @Override
     public void buttonCancelReservation() {
         view.dismissActivity();
+    }
+
+    @Override
+    public boolean check(Reservation reservation) {
+        if (reservation != null) {
+            if (reservation.getStartDate() != null || reservation.getEndDate() != null ||
+                    !reservation.getParkingLots().equals("") || !reservation.getUserPassword().equals("")) {
+                return true;
+            }
+        }
+        return false;
     }
 }
