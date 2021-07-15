@@ -45,7 +45,6 @@ public class ReservationDataBase {
     }
 
     public List<Reservation> getReservation(String parkingLots) {
-        List<Reservation> listReservation = reservationHashMap.get(parkingLots);
-        return listReservation;
+        return reservationHashMap.get(parkingLots);
     }
 }
