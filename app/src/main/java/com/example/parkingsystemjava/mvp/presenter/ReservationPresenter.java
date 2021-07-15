@@ -2,6 +2,7 @@ package com.example.parkingsystemjava.mvp.presenter;
 
 import com.example.parkingsystemjava.ReservationObject.Reservation;
 import com.example.parkingsystemjava.mvp.contract.ReservationActivityContract;
+import com.example.parkingsystemjava.utils.ConstantUtils;
 import java.util.Calendar;
 
 public class ReservationPresenter implements ReservationActivityContract.PresenterContract {
@@ -34,14 +35,35 @@ public class ReservationPresenter implements ReservationActivityContract.Present
 
     @Override
     public void buttonSaveReservation() {
-        model.saveReservation(view.getParkingLots(), view.getUserPassword());
-        Reservation reservation = model.getReservation(view.getParkingLots(), view.getUserPassword());
-        view.showMessageOfSavedStatement(reservation);
-        view.dismissActivity();
+        Reservation reservation = model.createReservation(view.getParkingLots(), view.getUserPassword());
+        model.existsOverlap(reservation);
+        if (!model.isOverlap()) {
+            if (check(reservation)) {
+                model.saveReservation();
+                view.showMessageOfSavedStatement(reservation);
+                view.dismissActivity();
+            } else {
+                view.showMessageOfError();
+            }
+        } else {
+            view.showMessageOfOverlapReservation();
+        }
     }
 
     @Override
     public void buttonCancelReservation() {
         view.dismissActivity();
+    }
+
+    @Override
+    public boolean check(Reservation reservation) {
+        if (reservation != null) {
+            if (reservation.getStartDate() != null || reservation.getEndDate() != null ||
+                    !reservation.getParkingLots().equals(ConstantUtils.EMPTY_STRING) ||
+                    !reservation.getUserPassword().equals(ConstantUtils.EMPTY_STRING)) {
+                return true;
+            }
+        }
+        return false;
     }
 }
