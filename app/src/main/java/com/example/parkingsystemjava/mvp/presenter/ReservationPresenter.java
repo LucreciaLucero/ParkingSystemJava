@@ -2,6 +2,7 @@ package com.example.parkingsystemjava.mvp.presenter;
 
 import com.example.parkingsystemjava.ReservationObject.Reservation;
 import com.example.parkingsystemjava.mvp.contract.ReservationActivityContract;
+import com.example.parkingsystemjava.utils.ConstantUtils;
 import java.util.Calendar;
 
 public class ReservationPresenter implements ReservationActivityContract.PresenterContract {
@@ -58,7 +59,8 @@ public class ReservationPresenter implements ReservationActivityContract.Present
     public boolean check(Reservation reservation) {
         if (reservation != null) {
             if (reservation.getStartDate() != null || reservation.getEndDate() != null ||
-                    !reservation.getParkingLots().equals("") || !reservation.getUserPassword().equals("")) {
+                    !reservation.getParkingLots().equals(ConstantUtils.EMPTY_STRING) ||
+                    !reservation.getUserPassword().equals(ConstantUtils.EMPTY_STRING)) {
                 return true;
             }
         }

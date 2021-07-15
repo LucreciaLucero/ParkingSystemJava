@@ -67,10 +67,7 @@ public class ReservationView extends ActivityView implements ReservationActivity
     public void showMessageOfError() {
         Context context = getContext();
         if (context != null) {
-            Toast.makeText(context,
-                    context.getString(R.string.toast_message_error_reservation_activity),
-                    Toast.LENGTH_SHORT)
-                    .show();
+            Toast.makeText(context, context.getString(R.string.toast_message_error_reservation_activity), Toast.LENGTH_SHORT).show();
         }
     }
 
@@ -78,10 +75,7 @@ public class ReservationView extends ActivityView implements ReservationActivity
     public void showMessageOfOverlapReservation() {
         Context context = getContext();
         if (context != null) {
-            Toast.makeText(context,
-                    context.getString(R.string.toast_message_overlap_reservation_activity),
-                    Toast.LENGTH_LONG)
-                    .show();
+            Toast.makeText(context, context.getString(R.string.toast_message_overlap_reservation_activity), Toast.LENGTH_LONG).show();
         }
     }
 }

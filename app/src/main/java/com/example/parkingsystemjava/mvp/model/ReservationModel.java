@@ -3,6 +3,7 @@ package com.example.parkingsystemjava.mvp.model;
 import com.example.parkingsystemjava.ReservationObject.Reservation;
 import com.example.parkingsystemjava.database.ReservationDataBase;
 import com.example.parkingsystemjava.mvp.contract.ReservationActivityContract;
+import com.example.parkingsystemjava.utils.ConstantUtils;
 import java.util.Calendar;
 import java.util.List;
 
@@ -24,7 +25,7 @@ public class ReservationModel implements ReservationActivityContract.ModelContra
 
     public Reservation createReservation(String parkingLots, String userPassword) {
         if (reservation.getStartDate() != null && reservation.getEndDate() != null &&
-                !parkingLots.equals("") && !userPassword.equals("")) {
+                !parkingLots.equals(ConstantUtils.EMPTY_STRING) && !userPassword.equals(ConstantUtils.EMPTY_STRING)) {
             this.reservation.setParkingLots(parkingLots);
             this.reservation.setUserPassword(userPassword);
             return this.reservation;
@@ -47,7 +48,8 @@ public class ReservationModel implements ReservationActivityContract.ModelContra
             List<Reservation> reservationList = database.getReservation(reservation.getParkingLots());
             if (reservationList != null) {
                 for (Reservation reservationSearched : reservationList) {
-                    if (reservationSearched.getEndDate().after(reservation.getStartDate())) {
+                    if (reservation.getStartDate().before(reservationSearched.getEndDate()) &&
+                            reservation.getEndDate().after(reservationSearched.getStartDate())) {
                         overlap = true;
                         return true;
                     }
