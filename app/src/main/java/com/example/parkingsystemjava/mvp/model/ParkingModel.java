@@ -1,5 +1,6 @@
 package com.example.parkingsystemjava.mvp.model;
 
+import com.example.parkingsystemjava.database.ReservationDataBase;
 import com.example.parkingsystemjava.mvp.contract.ParkingContract;
 
 public class ParkingModel implements ParkingContract.ModelContract {
@@ -11,5 +12,9 @@ public class ParkingModel implements ParkingContract.ModelContract {
 
     public int getParkingAvailables() {
         return this.parkingAvailables;
+    }
+
+    public int getClearPastReservations() {
+        return ReservationDataBase.getInstance().releasePastReservations();
     }
 }

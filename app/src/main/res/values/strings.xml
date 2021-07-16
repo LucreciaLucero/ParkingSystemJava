@@ -16,4 +16,6 @@
     <string name="toast_saved_reservation_activity">Reservation saved: \nStart: %1$s, \nEnd: %2$s, \nParking Lots: %3$s \nPass: %4$s </string>
     <string name="toast_message_error_reservation_activity">Error, complete all the fields</string>
     <string name="toast_message_overlap_reservation_activity">The date is not available \n  please choose another </string>
+    <string name="button_main_release_past_reservations">Release reservations</string>
+    <string name="toast_main_release_past_reservations">Past reservations removed: %1$d</string>
 </resources>

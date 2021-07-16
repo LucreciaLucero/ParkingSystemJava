@@ -7,12 +7,16 @@ public interface ParkingContract {
         void onButtonReservationPressed();
 
         void setParkingLots(int parkingLots);
+
+        void onButtonReleaseReservationsPressed();
     }
 
     interface ModelContract {
         void setParkingAvailables(int parkingLots);
 
         int getParkingAvailables();
+
+        int getClearPastReservations();
     }
 
     interface ViewContract {
@@ -21,5 +25,7 @@ public interface ParkingContract {
         void showReservationScreen();
 
         void showMessageOfParkingLots(int parkingsAvailable);
+
+        void showMessageOfClearReservations(int reservationsClear);
     }
 }

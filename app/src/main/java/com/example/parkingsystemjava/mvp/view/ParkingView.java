@@ -14,37 +14,41 @@ import com.example.parkingsystemjava.utils.ConstantUtils;
 
 public class ParkingView extends ActivityView implements ParkingContract.ViewContract {
 
-    private final ActivityMainBinding binding;
-
     public ParkingView(Activity activity, ActivityMainBinding binding) {
         super(activity);
-        this.binding = binding;
     }
 
     @Override
     public void showParkingsAvailable(int parkingsAvailable) {
         FragmentManager fragmentManager = getFragmentManager();
         DialogFragmentParkingLots editNameDialogFragment = new DialogFragmentParkingLots();
-        editNameDialogFragment.show(fragmentManager, ConstantUtils.DIALOG_FRAGMENT_TAG);
+        if (fragmentManager != null) {
+            editNameDialogFragment.show(fragmentManager, ConstantUtils.DIALOG_FRAGMENT_TAG);
+        }
     }
 
     @Override
     public void showMessageOfParkingLots(int parkingsAvailable) {
         Context context = getContext();
         if (context != null) {
-            Toast.makeText(context,
-                    context.getString(R.string.toast_main_parking_size,
-                            parkingsAvailable),
-                    Toast.LENGTH_SHORT)
-                    .show();
+            Toast.makeText(context, context.getString(R.string.toast_main_parking_size, parkingsAvailable), Toast.LENGTH_SHORT).show();
         }
     }
 
+    @Override
     public void showReservationScreen() {
         Context context = getContext();
         Activity activity = getActivity();
         if (context != null && activity != null) {
             activity.startActivity(ReservationActivity.newInstance(context));
+        }
+    }
+
+    @Override
+    public void showMessageOfClearReservations(int reservationsClear) {
+        Context context = getContext();
+        if (context != null) {
+            Toast.makeText(context, context.getString(R.string.toast_main_release_past_reservations, reservationsClear), Toast.LENGTH_SHORT).show();
         }
     }
 }

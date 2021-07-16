@@ -26,6 +26,7 @@ public class MainActivity extends AppCompatActivity implements ParkingDialogFrag
     private void setListeners() {
         binding.buttonMainParkingSize.setOnClickListener(view -> presenter.onButtonPressed());
         binding.buttonMainAddNewReservation.setOnClickListener(view -> presenter.onButtonReservationPressed());
+        binding.buttonMainReleasePastReservations.setOnClickListener(view -> presenter.onButtonReleaseReservationsPressed());
     }
 
     @Override
