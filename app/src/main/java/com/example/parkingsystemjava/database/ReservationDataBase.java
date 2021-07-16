@@ -1,9 +1,12 @@
 package com.example.parkingsystemjava.database;
 
 import com.example.parkingsystemjava.ReservationObject.Reservation;
+import com.example.parkingsystemjava.utils.ConstantUtils;
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Locale;
 import java.util.Map;
 
 public class ReservationDataBase {
@@ -46,5 +49,20 @@ public class ReservationDataBase {
 
     public List<Reservation> getReservation(String parkingLots) {
         return reservationHashMap.get(parkingLots);
+    }
+
+    public int releasePastReservations() {
+        int numberOfReservationsDeleted = ConstantUtils.ZERO;
+        Calendar todayDate = Calendar.getInstance(Locale.getDefault());
+        for (List<Reservation> listReservation : reservationHashMap.values()) {
+            if (listReservation != null) {
+                for (Reservation reservation : listReservation)
+                    if (reservation.getEndDate().before(todayDate)) {
+                        listReservation.remove(reservation);
+                        numberOfReservationsDeleted++;
+                    }
+            }
+        }
+        return numberOfReservationsDeleted;
     }
 }
