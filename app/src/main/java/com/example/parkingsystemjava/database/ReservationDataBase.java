@@ -35,18 +35,6 @@ public class ReservationDataBase {
         }
     }
 
-    public Reservation getReservation(String parkingLots, String pass) {
-        List<Reservation> listReservation = reservationHashMap.get(parkingLots);
-        if (listReservation != null) {
-            for (Reservation reservation : listReservation) {
-                if (reservation.getUserPassword().equals(pass)) {
-                    return reservation;
-                }
-            }
-        }
-        return null;
-    }
-
     public List<Reservation> getReservation(String parkingLots) {
         return reservationHashMap.get(parkingLots);
     }

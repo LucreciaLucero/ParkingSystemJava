@@ -63,4 +63,8 @@ public class ReservationModel implements ReservationActivityContract.ModelContra
     public boolean isOverlap() {
         return overlap;
     }
+
+    public Reservation getReservation() {
+        return reservation;
+    }
 }
