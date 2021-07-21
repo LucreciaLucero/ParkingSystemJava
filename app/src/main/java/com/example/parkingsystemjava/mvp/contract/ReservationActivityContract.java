@@ -46,5 +46,7 @@ public interface ReservationActivityContract {
         boolean existsOverlap(Reservation reservation);
 
         boolean isOverlap();
+
+        Reservation getReservation();
     }
 }
